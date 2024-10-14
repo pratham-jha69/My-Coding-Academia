@@ -1,0 +1,20 @@
+name: Run C Code
+
+on: [push, pull_request]
+
+jobs:
+  build-and-run-c:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up C compiler
+      run: sudo apt-get install gcc
+
+    - name: Compile C code
+      run: gcc -o output_folder/output_file c_code_folder/*.c
+
+    - name: Run C executable
+      run: ./output_folder/output_file

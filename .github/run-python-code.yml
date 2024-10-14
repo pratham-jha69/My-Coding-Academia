@@ -1,0 +1,19 @@
+name: Run Python Code
+
+on: [push, pull_request]
+
+jobs:
+  run-python:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+
+    - name: Run Python scripts
+      run: python python_code_folder/your_script.py
