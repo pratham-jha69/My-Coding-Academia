@@ -1,16 +1,18 @@
 #include <stdio.h>
-void swap(int *x,int *y)
+int arithmetic(int *x, int *y)
 {
-    int temp;
-    temp=*x;
-    *x=*y;
-    *y=temp;
+    int sum,diff;
+    sum=*x+*y;
+    diff=*x-*y;
+    *x=sum;
+    *y=diff;
+    return 0;
 }
 int main()
 {
-    int a=4,b=5;
+    int a=5,b=3;
     printf("The value of a is %d and the value of b is %d\n",a,b);
-    swap(&a,&b);
-    printf("After swap the value of a is %d and the value of b is %d\n",a,b);    
+    arithmetic(&a,&b);
+    printf("The value of a is %d and the value of b is %d\n",a,b);
     return 0;
 }
