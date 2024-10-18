@@ -25,7 +25,7 @@ void func3(int bray[][2])
     {
         for(int j=0;j<2;j++)
         {
-            printf("The value at %d,%d is %d\n",i,j,bray[i][j]);
+            printf("The value at %d,%d is %d\n",i,j,bray[i][j]); //*(rtr+i*2+j)
         }
     }
 }
