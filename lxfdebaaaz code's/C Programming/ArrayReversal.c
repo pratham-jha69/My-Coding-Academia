@@ -2,16 +2,16 @@
 void revarr(int arr[])
 {
     int temp;
-    for (int i = 0; i < 3; i++)
+    for (int i = 0; i < 4; i++)
     {
         temp = arr[i];
-        arr[i] = arr[5 - i];
-        arr[5 - i] = temp;
+        arr[i] = arr[6 - i];
+        arr[6 - i] = temp;
     }
 }
 int printarr(int arr[])
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
     {
         printf("Element at %d is %d\n", i, arr[i]);
     }
@@ -19,7 +19,7 @@ int printarr(int arr[])
 }
 int userinp(int user[])
 {
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
     {
         printf("Enter the element: ");
         scanf("%d", &user[i]);
@@ -29,11 +29,11 @@ int userinp(int user[])
 }
 int main()
 {
-    int arr[6];
+    int arr[7];
     userinp(arr);
     printarr(arr);
     revarr(arr);
-    ptintf("After reversal: ")
-        printarr(arr);
+    printf("After reversal:\n");
+    printarr(arr);
     return 0;
 }
