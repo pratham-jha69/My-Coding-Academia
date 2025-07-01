@@ -1,0 +1,10 @@
+| Format | Purpose                          | Example Code       | Output         |
+| ------ | -------------------------------- | ------------------ | -------------- |
+| `:.2f` | Float with 2 decimal places      | `f"{3.14159:.2f}"` | `3.14`         |
+| `:d`   | Integer format (default)         | `f"{42:d}"`        | `42`           |
+| `:>10` | Right-align in 10 spaces         | `f"{'cat':>10}"`   | `'       cat'` |
+| `:<10` | Left-align in 10 spaces          | `f"{'cat':<10}"`   | `'cat       '` |
+| `:^10` | Center-align in 10 spaces        | `f"{'cat':^10}"`   | `'   cat   '`  |
+| `:04d` | Integer padded with zeros        | `f"{7:04d}"`       | `0007`         |
+| `:,`   | Add comma as thousands separator | `f"{1000000:,}"`   | `1,000,000`    |
+| `:.0%` | Percentage (0 decimal places)    | `f"{0.87:.0%}"`    | `87%`          |
